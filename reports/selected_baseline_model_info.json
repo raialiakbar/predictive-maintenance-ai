@@ -1,0 +1,10 @@
+{
+    "selected_model": "Random Forest",
+    "selected_threshold": 0.5,
+    "reason": "Best overall F1-score and better precision-recall balance on the test set.",
+    "test_precision": 0.555556,
+    "test_recall": 0.735294,
+    "test_f1_score": 0.632911,
+    "test_roc_auc": 0.963745,
+    "test_pr_auc": 0.624041
+}
