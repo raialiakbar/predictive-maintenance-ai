@@ -1,3 +1,4 @@
+from functools import lru_cache
 from pathlib import Path
 import joblib
 import pandas as pd
@@ -47,7 +48,7 @@ def find_existing_path(paths, artifact_name):
         f"Could not find {artifact_name}. Checked these paths:\n{paths_text}"
     )
 
-
+@lru_cache(maxsize=1)
 def load_artifacts():
     model_path = find_existing_path(MODEL_PATHS, "trained model")
     preprocessor_path = find_existing_path(PREPROCESSOR_PATHS, "preprocessor")
